@@ -15,10 +15,11 @@ module ::ActionController
 
   class Base
     class << self
-      alias :old_relative_url_root :relative_url_root
+#      alias :old_relative_url_root :relative_url_root
       def relative_url_root
         Facebooker.path_prefix
       end
+      alias :old_relative_url_root :relative_url_root
     end
   end
 
